@@ -3,18 +3,18 @@ pipleline {
   stages  {
     stage('Build') {
       steps {
-        sudo apt-get update
+        sh "sudo apt-get update"
       }
     }
     stage('Test') {
       steps {
-        mkdir example
+        sh "mkdir example"
       }
     }
     stage('Deploy') {
       steps {
-        cd example
-        pwd
+        sh "cd example"
+        sh "pwd"
       }
     }
   }
